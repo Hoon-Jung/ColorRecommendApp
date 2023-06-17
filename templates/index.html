@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Boxes</title>
+    <style>
+        .color-box {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="POST">
+        <input type="text" name="message"><br>
+        <button type="submit" name="send">Submit</button>
+    </form>
+
+    <div>
+    {% if result %}
+        
+        {% for color in result.Colors %}
+            <div class="color-box" style="background-color: {{ color }}"></div>
+        {% endfor %}
+        
+        
+    {% endif %}
+    </div>
+    <script>
+        
+        // fetch("/data")
+        // .then(result => {
+        //     console.log("hi")
+        //     console.log(result)
+            // const dataList = document.getElementById('color_boxes');
+            // var colorBoxContainer = document.getElementById('color-box-container')
+            // colorBoxContainer.innerHTML = ''; 
+            // console.log("LIST ITEMS:")
+            // Iterate over the properties of the JSON object
+            // for (const property in result) {
+                
+                // console.log(property)
+            //     var colorBox = document.createElement('div');
+            //     colorBox.className = 'color-box';
+            //     colorBox.style.backgroundColor = property;
+            //     colorBoxContainer.appendChild(colorBox);
+        //     }
+        // })
+        // function createColorBoxes() {
+        //     var colorBoxContainer = document.getElementById('color-box-container');
+        //     colorBoxContainer.innerHTML = ''; // Clear any existing color boxes
+        //     for (var i = 0; i < 5; i++) {
+        //         var colorBox = document.createElement('div');
+        //         colorBox.className = 'color-box';
+        //         colorBox.style.backgroundColor = generateRandomColor();
+        //         colorBoxContainer.appendChild(colorBox);
+        //     }
+        // }
+    </script>
+</body>
+</html>
